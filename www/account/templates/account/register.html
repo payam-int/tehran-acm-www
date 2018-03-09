@@ -1,5 +1,12 @@
 {% extends "base.html" %}
-
+{% load semanticui %}
 {% block body %}
-    {{ form }}
+    <h1>Register</h1>
+    <form class="ui form" method="post" action="">
+        {% render_form form %}
+        {% csrf_token %}
+        <div class="submit">
+            <button type="submit" class="ui button">ثبت نام</button>
+        </div>
+    </form>
 {% endblock %}
