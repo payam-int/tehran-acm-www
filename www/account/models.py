@@ -10,5 +10,3 @@ class UserProfile(models.Model):
     student_id = models.IntegerField(max_length=9)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='profile')
     field = models.ForeignKey(Field, on_delete=models.CASCADE)
-
-
